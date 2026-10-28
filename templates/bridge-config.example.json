@@ -1,0 +1,30 @@
+{
+  "_说明": "QQ 桥接的配置骨架。真实文件里还有大量 socialV2 细项，这里只留必须自己填的。",
+  "dsh": {
+    "baseUrl": "http://127.0.0.1:<DSH_PORT>",
+    "provider": "deepseek-official",
+    "model": "deepseek-flash",
+    "authToken": ""
+  },
+  "snowluma": {
+    "wsUrl": "ws://127.0.0.1:3001",
+    "httpUrl": "http://127.0.0.1:3000",
+    "accessToken": "<BOT_TOKEN>"
+  },
+  "ownerQQ": "<OWNER_QQ>",
+  "agentPreset": "qq-chat-v2",
+  "role": {
+    "maxInjectChars": 6000
+  },
+  "allow": {
+    "private": ["<OWNER_QQ>"],
+    "groups": ["<GROUP_ID_1>", "<GROUP_ID_2>"]
+  },
+  "deny": {
+    "private": [],
+    "groups": []
+  },
+  "allowAllWhenEmpty": false,
+  "consolePort": 3100,
+  "consoleToken": ""
+}

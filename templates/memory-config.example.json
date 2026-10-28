@@ -1,0 +1,23 @@
+{
+  "_说明": "记忆服务配置。routes 里每个 scope 一条令牌，令牌至少 32 位、互不相同；只发给可信桥接，不给模型。",
+  "database": "<DATA_DIR>/memory.sqlite3",
+  "port": 8765,
+  "routes": {
+    "owner": {
+      "scope": "owner_private",
+      "owner": "<OWNER_QQ>",
+      "token": "<RANDOM_32+>"
+    },
+    "group:<GROUP_ID_1>": {
+      "scope": "group:<GROUP_ID_1>",
+      "token": "<RANDOM_32+>"
+    }
+  },
+  "embedding": {
+    "enabled": true,
+    "url": "http://127.0.0.1:11434",
+    "model": "bge-m3:latest",
+    "digest": "<MODEL_DIGEST>"
+  },
+  "mixing": 0.25
+}
