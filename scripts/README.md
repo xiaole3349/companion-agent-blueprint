@@ -5,6 +5,7 @@
 
 | 脚本 | 干什么 | 关键点 |
 |---|---|---|
+| `release.ps1` | 给蓝图打 release + 上传 kit 包 | 自动 bump 版本；令牌读 `$env:GH_TOKEN` 或 `~/.dsh/jingjing/state/gh-token.txt` |
 | `bridge-supervisor` | 守护 QQ 桥：发现宿主端口、掉了就拉起、发消息告知 | 挂登录计划任务，脱离宿主进程树；单实例锁 |
 | `restart-dsh` | 重启宿主（用于让预设/插件生效） | 用计划任务启动，避免被宿主一起杀掉 |
 | `token-stats` | 读桥接的 `token-usage.jsonl`，按群/私聊聚合 | 支持 `--days`、`--json`、CSV 导出 |
