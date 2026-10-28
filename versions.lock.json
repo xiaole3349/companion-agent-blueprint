@@ -18,8 +18,8 @@
     { "name": "dsh-feiyu-mood", "version": "0.7.4", "repo": "https://github.com/Yuuyuko-uu/dsh-feiyu-mood" },
     { "name": "dsh-speak-up", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-speak-up" },
     { "name": "dsh-qq-bridge", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-qq-bridge" },
-    { "name": "dsh-pin", "version": "0.1.0", "repo": "<待补>" },
-    { "name": "dsh-token-flow", "version": "0.1.0", "repo": "<待补>" }
+    { "name": "dsh-pin", "version": "0.1.0", "repo": "https://github.com/xiaole3349/dsh-pin" },
+    { "name": "dsh-token-flow", "version": "0.1.0", "repo": "https://github.com/xiaole3349/dsh-token-flow" }
   ],
   "vectorModel": {
     "name": "bge-m3:latest",

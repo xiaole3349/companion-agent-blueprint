@@ -9,7 +9,8 @@
 | `dsh-speak-up` | 主动搭话（掷骰 + 唤醒） | 触发文案、频率、安静时段 |
 | `dsh-qq-bridge` | 宿主侧 QQ 私聊桥 | 关掉，避免和 reserved2 桥重复 |
 | `dsh-tts-bridge` | 网页朗读 | 未用 |
-| `dsh-token-flow` | 本项目自带：统计各群 token 消耗 | 自写，见 `scripts/` |
+| `dsh-pin` | 钉住重要事 + 图书馆只留工具标签；群会话只读 | 自写：<https://github.com/xiaole3349/dsh-pin> |
+| `dsh-token-flow` | 统计各群 token 消耗与流向 | 自写：<https://github.com/xiaole3349/dsh-token-flow> |
 
 ## 改造要单独成包（overlay）
 
