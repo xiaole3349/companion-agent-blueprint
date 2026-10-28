@@ -15,17 +15,37 @@
 DSH 重启会带走子进程。守护要挂在**登录触发的计划任务**里：
 
 ```powershell
-$act = New-ScheduledTaskAction -Execute 'pwsh.exe' -Argument '-File <守护脚本>' -WindowStyle Hidden
+$scriptPath = 'C:\Companion\scripts\bridge-supervisor.ps1'
+$pwshPath = (Get-Command pwsh.exe -ErrorAction Stop).Source
+
+$act = New-ScheduledTaskAction `
+  -Execute $pwshPath `
+  -Argument "-NoProfile -WindowStyle Hidden -File `"$scriptPath`"" `
+  -WorkingDirectory (Split-Path -Parent $scriptPath)
+
 $trg = New-ScheduledTaskTrigger -AtLogOn
 $pri = New-ScheduledTaskPrincipal -UserId $env:USERNAME -LogonType Interactive
 Register-ScheduledTask -TaskName '桥接守护' -Action $act -Trigger $trg -Principal $pri -Force
 ```
+
+注意：`-WindowStyle Hidden` 不是 `New-ScheduledTaskAction` 的参数，它属于 PowerShell
+的启动参数，必须放进 `-Argument`；同时用 `-WorkingDirectory` 指定脚本目录，
+避免任务从系统目录启动导致相对路径失效。
 
 守护要做的三件事：
 
 1. 发现宿主的端口（每次启动都变）
 2. 端口变了或桥没了 → 拉起
 3. 拉起成功/失败都发一条消息给主人（别只在日志里写）
+
+### 守护的可靠性三件套
+
+只做到「掉线就重启」会踩坑，还要加：
+
+- **重启退避**：连续失败后指数退避（例如 5s、10s、30s、60s…封顶），别 1 秒拉一次把机器打满。
+- **通知限流**：同一条「桥挂了」最多发一次/告警一次，恢复后重置，避免每轮重启都刷屏。
+- **失效锁恢复**：锁文件里要写 PID 和时间戳；进程没了但锁还在（上次异常退出），
+  要能判定锁失效并接管，不能永远「锁着」导致谁都不起来。
 
 ## 单实例
 

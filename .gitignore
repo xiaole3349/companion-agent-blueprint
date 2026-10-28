@@ -13,6 +13,27 @@ data/
 backups/
 memory/
 sessions/
+archive/
+vendor/
+inbox/
+
+# 真实人格与私人物料（模板在 templates/ 里，是个例外）
+persona.txt
+persona-core.txt
+*.persona.txt
+*.persona-core.txt
+**/roles/*.md
+
+# 密钥与本地环境
+.env
+.env.*
+*.token
+token*.txt
+.secrets/
+qq-bridge-config.json
+fish-memory-config.json
+pins.json
+library.json
 
 # 配置里的真东西
 **/config.json

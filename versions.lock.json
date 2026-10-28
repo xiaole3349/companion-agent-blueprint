@@ -1,0 +1,29 @@
+{
+  "$comment": "组件版本锁定。占位符 <待补> 需要在你的部署里填成真实版本/提交，别照抄。",
+  "generatedAt": "2026-10-28",
+  "host": {
+    "name": "DeepSeek Harness",
+    "channel": "desktop",
+    "version": "<待补：DSH 版本>",
+    "runtime": { "node": "<待补>", "python": "<待补>" }
+  },
+  "bridge": {
+    "name": "qq-bridge-jingjing",
+    "mode": "reserved2",
+    "commit": "<待补：桥接仓库 commit>",
+    "repo": "<待补：承担 reserved2 的桥仓库链接>"
+  },
+  "plugins": [
+    { "name": "dsh-fish-memory", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-fish-memory" },
+    { "name": "dsh-feiyu-mood", "version": "0.7.4", "repo": "https://github.com/Yuuyuko-uu/dsh-feiyu-mood" },
+    { "name": "dsh-speak-up", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-speak-up" },
+    { "name": "dsh-qq-bridge", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-qq-bridge" },
+    { "name": "dsh-pin", "version": "0.1.0", "repo": "<待补>" },
+    { "name": "dsh-token-flow", "version": "0.1.0", "repo": "<待补>" }
+  ],
+  "vectorModel": {
+    "name": "bge-m3:latest",
+    "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+    "note": "digest 换模型或换机器时要重新生成（configure-ollama），改完做一次索引状态核对"
+  }
+}
