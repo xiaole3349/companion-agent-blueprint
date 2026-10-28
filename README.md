@@ -40,6 +40,7 @@
 | `docs/09-validation.md` | 部署验收清单 |
 | `docs/10-recovery.md` | 备份、恢复与回滚 |
 | `docs/11-cross-group-sharing.md` | 跨群共享：授权投影、撤回传播 |
+| `docs/12-roadmap.md` | 开发计划：现状、三阶段、不做什么 |
 | `templates/` | 脱敏后的配置模板 |
 | `scripts/` | 脚本清单与用途（不含本机路径和令牌） |
 | `UPSTREAMS.md` | 上游依赖、许可与致谢 |
