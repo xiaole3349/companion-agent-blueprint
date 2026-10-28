@@ -19,7 +19,8 @@
     { "name": "dsh-speak-up", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-speak-up" },
     { "name": "dsh-qq-bridge", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-qq-bridge" },
     { "name": "dsh-pin", "version": "0.1.0", "repo": "https://github.com/xiaole3349/dsh-pin" },
-    { "name": "dsh-token-flow", "version": "0.1.0", "repo": "https://github.com/xiaole3349/dsh-token-flow" }
+    { "name": "dsh-token-flow", "version": "0.1.0", "repo": "https://github.com/xiaole3349/dsh-token-flow" },
+    { "name": "dsh-memory-gui", "version": "0.1.0", "repo": "https://github.com/xiaole3349/dsh-memory-gui" }
   ],
   "vectorModel": {
     "name": "bge-m3:latest",

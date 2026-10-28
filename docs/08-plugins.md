@@ -11,6 +11,7 @@
 | `dsh-tts-bridge` | 网页朗读 | 未用 |
 | `dsh-pin` | 钉住重要事 + 图书馆只留工具标签；群会话只读 | 自写：<https://github.com/xiaole3349/dsh-pin> |
 | `dsh-token-flow` | 统计各群 token 消耗与流向 | 自写：<https://github.com/xiaole3349/dsh-token-flow> |
+| `dsh-memory-gui` | 记忆库与图书馆的浏览页（搜索/筛选/管理图书馆） | 自写：<https://github.com/xiaole3349/dsh-memory-gui> |
 
 ## 改造要单独成包（overlay）
 
