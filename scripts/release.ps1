@@ -27,7 +27,17 @@ if (-not $token) { throw '没有 GitHub 令牌：设 $env:GH_TOKEN 或写好 gh-
 
 # ── 版本号 ──────────────────────────────────────────────────────────────
 if (-not $Version) {
+  # 远端可能有 tag（比如上一次是走 API 发的 release），先拉一次再算
+  git -C $Repo fetch --tags --quiet 2>$null | Out-Null
   $existing = git -C $Repo tag --sort=-v:refname 2>$null | Where-Object { $_ -match '^v\d+\.\d+\.\d+$' } | Select-Object -First 1
+  if (-not $existing) {
+    # 本地没有 tag 就去问远端最新的 release
+    try {
+      $h = @{ Authorization = "token $token"; 'User-Agent' = 'jingjing'; 'Accept' = 'application/vnd.github+json' }
+      $latest = Invoke-RestMethod -Uri "https://api.github.com/repos/$Owner/$Name/releases/latest" -Headers $h -TimeoutSec 20
+      if ($latest.tag_name -match '^v\d+\.\d+\.\d+$') { $existing = $latest.tag_name }
+    } catch {}
+  }
   if ($existing) {
     $parts = $existing.TrimStart('v').Split('.')
     $Version = ('v{0}.{1}.{2}' -f $parts[0], $parts[1], ([int]$parts[2] + 1))
