@@ -1,6 +1,6 @@
 {
   "$comment": "组件版本锁定。占位符 <待补> 需要在你的部署里填成真实版本/提交，别照抄。",
-  "generatedAt": "2026-10-28",
+  "generatedAt": "2026-11-02",
   "host": {
     "name": "DeepSeek Harness",
     "channel": "desktop",
