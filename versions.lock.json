@@ -1,11 +1,14 @@
 {
   "$comment": "组件版本锁定。占位符 <待补> 需要在你的部署里填成真实版本/提交，别照抄。",
-  "generatedAt": "2026-11-02",
+  "generatedAt": "2026-11-10",
   "host": {
     "name": "DeepSeek Harness",
     "channel": "desktop",
-    "version": "<待补：DSH 版本>",
-    "runtime": { "node": "<待补>", "python": "<待补>" }
+    "version": "0.2.2-rc.1",
+    "runtime": {
+      "node": "<待补>",
+      "python": "<待补>"
+    }
   },
   "bridge": {
     "name": "qq-bridge-jingjing",
@@ -14,13 +17,47 @@
     "repo": "<待补：承担 reserved2 的桥仓库链接>"
   },
   "plugins": [
-    { "name": "dsh-fish-memory", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-fish-memory" },
-    { "name": "dsh-feiyu-mood", "version": "0.7.4", "repo": "https://github.com/Yuuyuko-uu/dsh-feiyu-mood" },
-    { "name": "dsh-speak-up", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-speak-up" },
-    { "name": "dsh-qq-bridge", "version": "<待补>", "repo": "https://github.com/Yuuyuko-uu/dsh-qq-bridge" },
-    { "name": "dsh-pin", "version": "0.1.0", "repo": "https://github.com/xiaole3349/dsh-pin" },
-    { "name": "dsh-token-flow", "version": "0.1.0", "repo": "https://github.com/xiaole3349/dsh-token-flow" },
-    { "name": "dsh-memory-gui", "version": "0.1.0", "repo": "https://github.com/xiaole3349/dsh-memory-gui" }
+    {
+      "name": "dsh-fish-memory",
+      "version": "<待补>",
+      "repo": "https://github.com/Yuuyuko-uu/dsh-fish-memory"
+    },
+    {
+      "name": "dsh-feiyu-mood",
+      "version": "0.7.4",
+      "repo": "https://github.com/Yuuyuko-uu/dsh-feiyu-mood"
+    },
+    {
+      "name": "dsh-speak-up",
+      "version": "<待补>",
+      "repo": "https://github.com/Yuuyuko-uu/dsh-speak-up"
+    },
+    {
+      "name": "dsh-qq-bridge",
+      "version": "<待补>",
+      "repo": "https://github.com/Yuuyuko-uu/dsh-qq-bridge"
+    },
+    {
+      "name": "dsh-pin",
+      "version": "0.1.0",
+      "repo": "https://github.com/xiaole3349/dsh-pin"
+    },
+    {
+      "name": "dsh-token-flow",
+      "version": "0.1.0",
+      "repo": "https://github.com/xiaole3349/dsh-token-flow"
+    },
+    {
+      "name": "dsh-memory-gui",
+      "version": "0.1.0",
+      "repo": "https://github.com/xiaole3349/dsh-memory-gui"
+    },
+    {
+      "name": "dsh-tts-bridge",
+      "version": "1.3.3",
+      "repo": "https://github.com/Yuuyuko-uu/dsh-tts-bridge",
+      "note": "朗读桥：语音走浏览器；火狐需自行构建并走 AMO 未列出签名"
+    }
   ],
   "vectorModel": {
     "name": "bge-m3:latest",
